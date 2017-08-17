@@ -435,7 +435,7 @@ function transform( targets, duration ) {
 		.start();
 
 }
-//当窗口改变时，改变照相机的位置，改变渲染器的宽高，从新渲染窗口
+//当窗口改变时，改变照相机的位置，改变渲染器的宽高，重新渲染窗口
 function onWindowResize() {
 	camera.aspect = window.innerWidth / window.innerHeight;
 	camera.updateProjectionMatrix();
@@ -448,7 +448,7 @@ function animate() {
 	TWEEN.update();
 	controls.update();
 }
-//从新渲染
+//重新渲染
 function render() {
 	renderer.render( scene, camera );
 }
